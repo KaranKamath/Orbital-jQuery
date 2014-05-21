@@ -12,16 +12,22 @@ $(document).ready(function() {
     // Parameters:
     //          feedTitle: This is the title of the feed        
     function addTabControlForFeed(feedTitle) {
-        var feedControl = $(document.createElement("li"));
 
-        var feedControlLink = $(document.createElement("a"));
-        feedControlLink.attr("href", "#" + feedTitle);
-        feedControlLink.attr("data-toggle", "tab");
-        feedControlLink.append(feedTitle);
+        // TODO: create a li jQuery object
+        
+        // TODO: create an a jQuery object
+        
+        // TODO: give the "a" object an href attribute of "#" + feedTitle
+        // TODO: give the "a" object a data-toggle attribute of "tab"
+        
 
-        feedControl.append(feedControlLink);
-
-        $("#feedMasterPanel ul").append(feedControl);
+        // TODO: add the title within the <a></a>
+        
+        // TODO: add the a object to the li object
+        
+        // TODO: add the li object to the ul in feedMasterPanel
+        
+        // Hints: Use document.createElement/jQuery alternative, .append, .attr
     }
 
     // This function adds a tab pane for the new feed
@@ -70,16 +76,22 @@ $(document).ready(function() {
 
     // This function shows and activates the progress bar
     function activateProgressBar() {
-        $('.progress-bar').show();
-        $('.progress-bar').progressbar();
+        // TODO: Look up documentation for bootstrap-progressbar plugin
+        // TODO: Show the element with the progress-bar class
+        // TODO: Make the Bar Progress
+
+        // Hints: Look up .show, and find the relevant call for progressing the bar
     }
 
     // This function fades and resets the progress bar
     function dismissProgressBar() {
-        $.when($('.progress-bar').fadeOut(2000)).done(function() {
-            $('.progress .progress-bar').css('width', 0);
-            $('.progress .progress-bar').attr('aria-valuenow', "0");
-        });
+        // TODO: First, fade out the element with the progress-bar class
+        // over 2 seconds. When that is done:
+        // 1. set the width css attribute of the progress bar to 0
+        // 2. set the aria-value now attribute of the progress bar to 0
+        
+        // Hints: Look up $.when, and it's chained done call
+        // Also useful here are .css, and .attr
     }
 
     // This function breaks the feed title when a 
@@ -148,14 +160,10 @@ $(document).ready(function() {
     // if it is non null
     $("#rssLinkForm").submit(function(event) {
         event.preventDefault();
+        //TODO: Extract the value of the input, and pass it to 
+        //      getFeedWithUrl if non-null
 
-        feedUrl = $("#feedURL").val();
-
-        if (feedUrl !== "") {
-            getFeedWithURL(feedUrl);
-        } else {
-            console.log("Null Input");
-        }
+        // Hints: Look up .val
     });
 
     // This is the click handler for the hide paragraphs button
@@ -166,10 +174,9 @@ $(document).ready(function() {
     // Slides them up if they were visible
     $("#hideParagraphsButton").click(function(event) {
         event.preventDefault();
-        if ($("#feedDetailContainer .active p").is(":hidden")) {
-            $("#feedDetailContainer .active p").slideDown(400);
-        } else {
-            $("#feedDetailContainer .active p").slideUp(400);
-        }
+        
+        // TODO: Implement the logic here
+
+        // Hints: Use .is, .slideDown, .slideUp 
     });
 });
