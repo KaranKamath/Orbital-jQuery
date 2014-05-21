@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>RSS Reader</title>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/custom.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<body>
+  <nav class="navbar navbar-default" role="navigation">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">RSS Feed Reader</a>
+        </div>
+        <div class="collapse navbar-collapse navbar-right">
+          <form class="navbar-form" role="search" id="rssLinkForm">
+            <div class="form-group">
+              <input type="url" class="form-control" placeholder="Enter RSS Link" id="feedURL" />
+            </div>
+            <button type="submit" class="btn btn-primary">Get Feed</button>
+            <button type="button" id="hideParagraphsButton" class="btn btn-primary">Show/Hide Paragraphs</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div class="container" id="feedContainer">
+    <div class="row">
+      <div class="col-md-3 tabbable tabs-left" id="feedMasterPanel">
+        <ul class="nav nav-tabs" id="tabControls">
+        </ul>
+      </div>
+      <div class="col-md-9 tab-content" id="feedDetailContainer">
+      </div>
+    </div>
+  </div>
+
+  <div class="navber navbar-fixed-bottom" id="footerProgressBar">
+    <div class="progress progress-striped active">
+      <div class="progress-bar" role="progressbar" aria-valuetransitiongoal="100"></div>
+    </div>
+  </div>
+  
+  <!--<script src="../js/jquery-2.1.0.min.js"></script>-->
+  <script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+
+  <!-- Latest compiled and minified JavaScript -->
+
+  <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+  <script src="../js/bootstrap.min.js"></script>
+  <script src="../js/jquery-rss.js"></script>
+  <script src="../js/bootstrap-progressbar.min.js"></script>
+
+</body>
+</html>
