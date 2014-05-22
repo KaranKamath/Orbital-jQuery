@@ -88,9 +88,9 @@ $(document).ready(function() {
         // TODO: First, fade out the element with the progress-bar class
         // over 2 seconds. When that is done:
         // 1. set the width css attribute of the progress bar to 0
-        // 2. set the aria-value now attribute of the progress bar to 0
+        // 2. set the aria-valuenow attribute of the progress bar to 0
         
-        // Hints: Look up $.when, and it's chained done call
+        // Hints: Look up $.when, and its chained done call
         // Also useful here are .css, and .attr
     }
 
